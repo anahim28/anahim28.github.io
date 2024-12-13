@@ -1,11 +1,6 @@
 :root {
     --primaryText: #fff;
     --secondaryText: #6784a1;
-    --primary: rgba(156, 39, 176, 0.6);
-    --secondary: rgba(255, 1, 94, 0.6);
-    --buttonHover: rgba(56, 49, 103, 0.4);
-    --smallButtonHover: rgba(0, 0, 0, 0.25);
-    --darkBlue: #003366;
 }
 
 html {
@@ -16,7 +11,7 @@ html {
 body {
     margin: 0;
     min-height: 100%;
-    background: linear-gradient(rgba(248, 245, 245, 0.1), rgba(252, 251, 251, 0.1)), url('background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -31,7 +26,7 @@ body {
 
 .container {
     text-align: center;
-    width: 100%;    
+    width: 100%;
     padding: 0;
     flex: 1;
     display: flex;
@@ -41,38 +36,69 @@ body {
 
 .button.toggle,
 .button.resume { 
-    background-color: rgba(0, 0, 51, 0.6);
-    border: 1px solid rgba(0, 0, 51, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
     color: var(--primaryText);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     padding: 15px 30px;
     border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 @media (hover: hover) {
     .button:hover { 
-        background-color: rgba(0, 0, 51, 0.8);
-        color: #fff;
+        background-color: rgba(255, 255, 255, 0.4);
+        color: #000;
     }
 }
 
 .slidedown {
     overflow: hidden;
     height: 0;
-    transition: height 0.3s ease-in-out;
+    transition: height 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 0 15px;
+}
+
+.intro {
+    font-size: 1.2em;
+    color: var(--primaryText);
+    margin: 20px 0;
+    text-align: center;
+}
+
+.section-header h1 {
+    font-size: 2em;
+    color: var(--primaryText);
+    margin: 40px 0 20px;
+    text-transform: uppercase;
+}
+
+.description h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.description p {
+    font-size: 1em;
+    margin: 10px 0 20px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .footer {
-    font-size: 0.66em;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgba(225, 225, 225, 0.8);
-    text-decoration: none;
+    font-size: 0.8em;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
 }
-
 .footer a {
-    color: inherit;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
 }
