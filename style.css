@@ -1,13 +1,12 @@
 :root {
     --primaryText: #fff;
     --secondaryText: #6784a1; /* Blue color for the name */
-    --primary: rgba(156, 39, 176, .60);  /* Use rgba for transparency */
-    --secondary: rgba(255, 1, 94, .60); 
-    --buttonHover: rgba(56, 49, 103, 0.4); /* Use rgba with the correct values */
+    --primary: rgba(156, 39, 176, .60); /* Corrected color value */
+    --secondary: rgba(255, 1, 94, .60); /* Corrected color value */
+    --buttonHover: rgba(56, 49, 103, 0.4); /* Corrected color value */
     --smallButtonHover: rgba(0, 0, 0, .25);
     --darkBlue: #003366; /* Dark blue color for Blog, Video, Podcast, and Resume buttons */
 }
-
 html {
     box-sizing: border-box;
     height: 100%;
