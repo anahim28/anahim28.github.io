@@ -1,13 +1,3 @@
-/ (root directory)
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── slider.js
-├── images/
-│   ├── beach.jpg
-│   └── square_pfp.jpg
-
 :root {
     --primaryText: #fff;
     --secondaryText: #f4f1f1;
