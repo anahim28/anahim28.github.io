@@ -24,9 +24,18 @@ body {
     align-items: center;
 }
 
+.image-container img {
+    width: 150px; /* Smaller width */
+    height: 150px; /* Smaller height */
+    object-fit: cover; /* Keep image cropped correctly */
+    border-radius: 50%; /* Circle shape */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Optional border */
+    margin-bottom: 20px;
+}
+
 .container {
     text-align: center;
-    width: 100%;
+    width: 100%;    
     padding: 0;
     flex: 1;
     display: flex;
@@ -35,20 +44,23 @@ body {
 }
 
 .button.toggle,
-.button.resume { 
+.button.resume {
     background-color: rgba(255, 255, 255, 0.2);
     color: var(--primaryText);
     border: 2px solid rgba(255, 255, 255, 0.5);
-    padding: 15px 30px;
-    border-radius: 25px;
+    padding: 25px 60px; /* Larger padding for proper size */
+    border-radius: 35px; /* Extra-rounded edges */
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 1.4em; /* Slightly larger font size */
+    letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 @media (hover: hover) {
-    .button:hover { 
+    .button.toggle:hover,
+    .button.resume:hover {
         background-color: rgba(255, 255, 255, 0.4);
         color: #000;
     }
@@ -64,27 +76,26 @@ body {
 }
 
 .intro {
-    font-size: 1.2em;
-    color: var(--primaryText);
-    margin: 20px 0;
+    font-size: 1.5em; /* Larger intro text */
+    margin: 30px 0; /* Add more spacing */
     text-align: center;
 }
 
 .section-header h1 {
-    font-size: 2em;
+    font-size: 2.5em; /* Larger section header size */
     color: var(--primaryText);
-    margin: 40px 0 20px;
+    margin: 50px 0 25px;
     text-transform: uppercase;
 }
 
 .description h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
+    font-size: 1.8em; /* Larger heading for description */
+    margin: 15px 0;
 }
 
 .description p {
-    font-size: 1em;
-    margin: 10px 0 20px;
+    font-size: 1.2em; /* Larger paragraph text */
+    margin: 15px 0 30px; /* Adjust spacing */
     color: rgba(255, 255, 255, 0.8);
 }
 
