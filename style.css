@@ -1,3 +1,12 @@
+:root {
+  --primaryText: #B73239;
+  --secondaryText: #000;
+  --primary: rgba(245, 243, 246, 0.25);
+  --secondary: rgba(255, 1, 94, 0.6); 
+  --buttonHover: rgba(156, 39, 176, 0.4);
+  --smallButtonHover: rgba(0, 0, 0, 0.25);
+}
+
 body {
   margin: 0;
   min-height: 100%;
@@ -7,34 +16,54 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: Futura, Verdana, sans-serif;
-  font-size: 18px;
   line-height: 1.5;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  color: #B73239;
 }
 
 .container {
+  text-align: center;
   width: 100%;
   max-width: 768px;
   padding: 1em;
-  text-align: center;
+  flex: 1;
 }
 
-h1, h2 {
-  margin: 0.5em 0;
+.image-container img {
+  margin: 1em;
+  border-radius: 50%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.main-text-color {
+  color: var(--primaryText);
+}
+
+.name {
+  color: var(--secondaryText);
+}
+
+.section-header {
+  margin-top: 1em;
 }
 
 .button {
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 1px solid #B73239;
+  background-color: var(--primary);
+  border: 1px solid var(--primaryText);
+  border-radius: 25px;
   padding: 0.5em 1em;
   margin: 1em auto 0;
-  border-radius: 25px;
-  cursor: pointer;
   width: 80%;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--buttonHover);
 }
 
 .slidedown {
@@ -47,22 +76,31 @@ h1, h2 {
 
 .description {
   text-align: left;
+  background: rgba(255, 255, 255, 0.85);
   padding: 1em;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
   margin-top: 0.5em;
+  border-radius: 12px;
+}
+
+.description h2 {
+  font-size: 1em;
+  margin-bottom: 0.3em;
+  color: var(--secondaryText);
 }
 
 a {
-  display: inline-block;
-  margin: 0.5em 0 1em;
   text-decoration: none;
-  color: #B73239;
+  color: var(--primaryText);
   font-weight: bold;
+  display: block;
+  margin-bottom: 1em;
 }
 
 .footer {
   font-size: 0.75em;
-  color: #444;
+  color: #333;
   margin-top: 2em;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1em;
+  border-radius: 8px;
 }
