@@ -1,69 +1,21 @@
-:root {
-  --primaryText: #B73239;
-  --secondaryText: #000;
-  --primary: rgba(245, 243, 246, 0.25);
-  --secondary: rgba(255, 1, 94, 0.6); 
-  --buttonHover: rgba(156, 39, 176, 0.4);
-  --smallButtonHover: rgba(0, 0, 0, 0.25);
-}
-
-body {
-  margin: 0;
-  min-height: 100%;
-  background: url('../images/IMG_0319.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  font-family: Futura, Verdana, sans-serif;
-  line-height: 1.5;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.container {
-  text-align: center;
-  width: 100%;
-  max-width: 768px;
-  padding: 1em;
-  flex: 1;
-}
-
-.image-container img {
-  margin: 1em;
-  border-radius: 50%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.main-text-color {
-  color: var(--primaryText);
-}
-
-.name {
-  color: var(--secondaryText);
-}
-
-.section-header {
-  margin-top: 1em;
-}
-
 .button {
-  background-color: var(--primary);
-  border: 1px solid var(--primaryText);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #B73239;
+  color: #B73239;
+  font-weight: bold;
   border-radius: 25px;
-  padding: 0.5em 1em;
-  margin: 1em auto 0;
+  padding: 0.75em 1.5em;
+  margin: 1em auto;
   width: 80%;
+  max-width: 500px;
+  text-align: center;
   cursor: pointer;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .button:hover {
-  background-color: var(--buttonHover);
+  background-color: #B73239;
+  color: white;
 }
 
 .slidedown {
@@ -75,32 +27,23 @@ body {
 }
 
 .description {
-  text-align: left;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 1em;
-  margin-top: 0.5em;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: left;
 }
 
 .description h2 {
+  margin: 0.5em 0 0.2em;
   font-size: 1em;
-  margin-bottom: 0.3em;
-  color: var(--secondaryText);
+  color: #222;
 }
 
-a {
-  text-decoration: none;
-  color: var(--primaryText);
-  font-weight: bold;
-  display: block;
+.description a {
+  display: inline-block;
   margin-bottom: 1em;
-}
-
-.footer {
-  font-size: 0.75em;
-  color: #333;
-  margin-top: 2em;
-  background: rgba(255, 255, 255, 0.5);
-  padding: 1em;
-  border-radius: 8px;
+  text-decoration: none;
+  color: #B73239;
+  font-weight: bold;
 }
