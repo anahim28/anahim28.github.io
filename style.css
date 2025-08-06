@@ -1,49 +1,242 @@
-.button {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid #B73239;
-  color: #B73239;
-  font-weight: bold;
-  border-radius: 25px;
-  padding: 0.75em 1.5em;
-  margin: 1em auto;
-  width: 80%;
-  max-width: 500px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
+:root {
+    --primaryText: #B73239;
+    --secondaryText: #000;
+    --primary: rgba(245, 243, 246, 0.251);
+    --secondary: rgba(255, 1, 94, .60); 
+    --buttonHover: rgba(156, 39, 176, .40);
+    --smallButtonHover: rgba(0, 0, 0, .25);
 }
 
-.button:hover {
-  background-color: #B73239;
-  color: white;
+html {
+    box-sizing: border-box;
+    /* keeps button boxes within phone screen width */
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    /* Updated the path to the correct one for GitHub Pages */
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(’background.jpg');
+    /* Prevents the browser from repeating or "tiling" the background image */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Freezes the image so that even the content scrolls down, the background stays put */
+    background-attachment: fixed;
+    /* Resizes the background image to cover the entire container */
+    background-size: cover;
+    font-family: Futura, Verdana, sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+h1 {
+    font-size: 1em;
+}
+
+h2 {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+img {
+    margin: .5em 1em;
+    /* border: 1px solid #ccc; */
+    border-radius: 50%;
+    height: 150px;
+    max-width: 100%;
+    object-fit: cover;
+    /* Resizes the image to cover the entire container */
+}
+
+.container {
+    text-align: center;
+    width: 100%;    
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-container {
+    text-align: center;
+    width: 100%;
+}
+
+.main-text-color {
+    color: var(--primaryText);
+}
+
+.name {
+    color: var(--secondaryText);
+}
+
+.section-header {
+    padding-top: .5em;
+}
+
+.button,
+.intro,
+.links-container,
+.slidedown,
+.external-link {
+    width: 100%;
+    min-width: 50%;
+    padding: .5em 1em;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.button, .external-link {
+    border: 1px solid var(--primaryText);
+    border-radius: 20px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.button:not(.highlight) {
+    background-color: var(--primary);
+}
+
+@media (hover: hover) {
+    .button:hover { background-color: var(--buttonHover); }
+}
+
+.button.highlight {
+    background-color: var(--secondary);
+}
+
+.button:active, .external-link:active { 
+    transform: scale(0.98); 
+    /* Scaling button to 0.98 to its original size */ 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+    /* Lowering the shadow */ 
+} 
+
+.intro {
+    margin: 0 auto;
+}
+
+.section {
+    margin-top: 1em;
 }
 
 .slidedown {
-  overflow: hidden;
-  height: 0;
-  transition: height 0.4s ease;
-  width: 85%;
-  margin: 0 auto;
+    margin: 0 auto;
+    padding: 0;
+    -webkit-transition: height .4s ease;
+    -o-transition: height .4s ease;
+    transition: height .4s ease;
+    overflow: hidden;
+    height: 0;
+}
+
+.external-link {
+    border: 1px solid var(--primaryText);
+    border-radius: 20px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: .5em auto 1.5em auto;
+    text-decoration: none;
+    color: inherit;
+    height: 2em;
+    width: 6em;
+}
+
+.external-link:hover {
+    background-color: var(--smallButtonHover)
 }
 
 .description {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 1em;
-  margin-bottom: 1em;
-  text-align: left;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 0 .6em;
 }
 
-.description h2 {
-  margin: 0.5em 0 0.2em;
-  font-size: 1em;
-  color: #222;
+.description > p {
+    margin: .5em 0;
 }
 
-.description a {
-  display: inline-block;
-  margin-bottom: 1em;
+.footer {
+  font-size: .66em;
+  background-color: rgba(0, 0, 0, .5);
+  color: rgba(225, 225, 225, .8);
   text-decoration: none;
-  color: #B73239;
-  font-weight: bold;
+  width: 100%;
+  min-height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.footer a {
+    color: inherit;
+}
+
+/* Media queries allow you to change style properties according to the screen width. In this case, if the screen is AT LEAST 540 pixels wide (bigger than a standard phone), the .container resizes to 540 pixels and the buttons and intro resize to 85% of the container width */
+@media (min-width: 540px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .button,
+    .intro,
+    .slidedown {
+        width: 85%;
+    }
+}
+
+/* If the screen is AT LEAST 768 pixels wide (standard tablet or larger), the .container resizes to 750 pixels and the buttons and intro resize to 40% of the container width */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+    
+    .button,
+    .intro,
+    .slidedown {
+        width: 40%;
+    }
+}
+.intro {
+    position: relative;
+}
+
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Add a dark overlay */
+    filter: blur(8px); /* Blur effect */
+    z-index: -1; /* Place behind the text */
 }
