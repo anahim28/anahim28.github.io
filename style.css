@@ -25,8 +25,9 @@ body {
     margin: 0;
     min-height: 100%;
     /* Updated the path to the correct one for GitHub Pages */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(’background.jpg');
-    /* Prevents the browser from repeating or "tiling" the background image */
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../images/IMG_0319.jpg');
+
+/* Prevents the browser from repeating or "tiling" the background image */
     background-repeat: no-repeat;
     background-position: center;
     /* Freezes the image so that even the content scrolls down, the background stays put */
