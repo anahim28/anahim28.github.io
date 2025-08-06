@@ -25,7 +25,8 @@ body {
     margin: 0;
     min-height: 100%;
     /* Updated the path to the correct one for GitHub Pages */
-    background: url('../images/IMG_0319.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)), url('../images/IMG_0319.jpg');
+
 
 
 /* Prevents the browser from repeating or "tiling" the background image */
