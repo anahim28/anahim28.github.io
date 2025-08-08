@@ -38,7 +38,7 @@ body {
     font-size: 18px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -102,8 +102,11 @@ img {
     color: inherit;
     text-align: center;
 }
+    .button, .external-link {
+    background-color: #800020
+; /* Light Blue, or any color you prefer */
+    color: #000000; /* Explicitly set text color to black */
 
-.button, .external-link {
     border: 1px solid var(--primaryText);
     border-radius: 20px;
     box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
@@ -229,7 +232,8 @@ img {
 }
 
 .intro::before {
-    content: "";
+    content: none; /* removes the pseudo element entirely */
+
     position: absolute;
     top: 0;
     left: 0;
