@@ -40,6 +40,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.5em; /* spacing between buttons */
+    margin: 1em auto; /* space above and below + center horizontally */
 }
 
 h1 {
