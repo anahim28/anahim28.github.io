@@ -92,18 +92,23 @@ img {
     padding-top: .5em;
 }
 
-.button,
-.intro,
-.links-container,
-.slidedown,
+..button,
 .external-link {
-    width: 100%;
-    min-width: 50%;
-    padding: .5em 1em;
-    text-decoration: none;
+    display: block;
+    margin: 0.5em auto;        /* Horizontally center the buttons */
+    width: 90%;               /* Fluid width (adjust this if needed) */
+    max-width: 400px;         /* Prevent buttons from becoming too wide */
+    font-size: clamp(14px, 2.5vw, 24px); /* Fluid font size between 14px and 24px */
+    padding: 0.5em 2em;       /* Padding scales with font size */
+    border-radius: 1.25em;    /* Rounded corners scale with font size */
+    box-shadow: 0.4em 0.35em 1.75em rgba(0, 0, 0, 0.24); /* Scaled shadow */
+    text-decoration: none;    /* Inherited from original */
     color: inherit;
     text-align: center;
+    cursor: pointer;
+    transition: 0.2s all;
 }
+
     .button, .external-link {
     background-color: #800020
 ; /* Light Blue, or any color you prefer */
