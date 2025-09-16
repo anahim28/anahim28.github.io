@@ -70,9 +70,9 @@ img {
     border-radius: 1.25em;
     box-shadow: 0.4em 0.35em 1.75em rgba(0, 0, 0, 0.24);
     text-align: center;
-    color: #800020;
+    color: #6F8FAF;
     background-color: var(--primary);
-    border: 1px solid #800020(--primaryText);
+    border: 1px solid #6F8FAF(--primaryText);
     cursor: pointer;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     overflow: hidden;
@@ -80,7 +80,7 @@ img {
 }
 
 .button.highlight {
-    background-color: #800020(--secondary);
+    background-color:#6F8FAF(--secondary);
 }
 
 .button:active {
@@ -126,7 +126,7 @@ img {
 .footer {
     font-size: .66em;
     background-color: rgba(0, 0, 0, .5);
-    color: rgba(225, 225, 225, .8);
+    color: #000000(225, 225, 225, .8);
     text-decoration: none;
     width: 100%;
     min-height: 3em;
