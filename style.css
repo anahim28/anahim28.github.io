@@ -22,7 +22,9 @@ html, body {
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images:IMG_0319.jpg) no-repeat center fixed;
     background-size: cover;
-    font-family: Garamond, Georgia, serif;
+    font-family: body {
+    font-family: "Times New Roman", Times, serif;
+}
     font-size: 18px;
     color: var(--primaryText);
     display: flex;
