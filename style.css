@@ -70,7 +70,7 @@ img {
     border-radius: 1.25em;
     box-shadow: 0.4em 0.35em 1.75em rgba(0, 0, 0, 0.24);
     text-align: center;
-    color: #000000;
+    color: #800020;
     background-color: var(--primary);
     border: 1px solid var(--primaryText);
     cursor: pointer;
