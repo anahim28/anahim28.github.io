@@ -70,9 +70,9 @@ img {
     border-radius: 1.25em;
     box-shadow: 0.4em 0.35em 1.75em rgba(0, 0, 0, 0.24);
     text-align: center;
-    color: #6F8FAF;
+    color: ##35485e;
     background-color: var(--primary);
-    border: 1px solid #6F8FAF(--primaryText);
+    border: 1px solid #35485e(--primaryText);
     cursor: pointer;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     overflow: hidden;
@@ -80,7 +80,7 @@ img {
 }
 
 .button.highlight {
-    background-color:#6F8FAF(--secondary);
+    background-color:#35485e(--secondary);
 }
 
 .button:active {
