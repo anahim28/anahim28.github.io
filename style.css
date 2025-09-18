@@ -22,9 +22,7 @@ html, body {
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images:IMG_0319.jpg) no-repeat center fixed;
     background-size: cover;
-    font-family: body {
     font-family: "Times New Roman", Times, serif;
-}
     font-size: 18px;
     color: var(--primaryText);
     display: flex;
@@ -46,9 +44,10 @@ body {
     margin: 0 auto;
 }
 
+/* Heading styling for visibility */
 h1, h2 {
-    font-size: 1em;
-    margin-bottom: 0;
+    font-size: 2em;
+    margin-bottom: 0.5em;
 }
 
 img {
@@ -65,22 +64,29 @@ img {
     width: 90%;
     max-width: 400px;
     margin: 0.5em auto;
-    font-size: clamp(14px, 2.5vw, 22px);
+    font-size: clamp(18px, 2.5vw, 22px);
     padding: 0.5em 2em;
     border-radius: 1.25em;
     box-shadow: 0.4em 0.35em 1.75em rgba(0, 0, 0, 0.24);
     text-align: center;
-    color: ##35485e;
+    color: #35485e;
     background-color: var(--primary);
-    border: 1px solid #35485e(--primaryText);
+    border: 1px solid #35485e;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     overflow: hidden;
     white-space: nowrap;
 }
 
+/* Toggle label styling - adjust as needed */
+.toggle-label {
+    font-size: clamp(18px, 2vw, 22px);
+    color: var(--primaryText);
+    padding: 0.2em 0.7em;
+}
+
 .button.highlight {
-    background-color:#35485e(--secondary);
+    background-color: var(--secondary);
 }
 
 .button:active {
@@ -99,6 +105,10 @@ img {
     }
     .button {
         width: 85%;
+        font-size: 20px;
+    }
+    .toggle-label {
+        font-size: 20px;
     }
 }
 
@@ -108,6 +118,10 @@ img {
     }
     .button {
         width: 40%;
+        font-size: 22px;
+    }
+    .toggle-label {
+        font-size: 22px;
     }
 }
 
@@ -124,9 +138,9 @@ img {
 }
 
 .footer {
-    font-size: .66em;
+    font-size: 1em;
     background-color: rgba(0, 0, 0, .5);
-    color: #000000(225, 225, 225, .8);
+    color: rgba(225, 225, 225, .8);
     text-decoration: none;
     width: 100%;
     min-height: 3em;
