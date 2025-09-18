@@ -5,9 +5,10 @@
     --secondary: rgba(255, 1, 94, .60); 
     --buttonHover: rgba(156, 39, 176, .40);
     --smallButtonHover: rgba(0, 0, 0, .25);
+    --bodyFont: "Times New Roman", Times, serif;
+    --headingFont: "Georgia", serif;
 }
 
-/* Box-sizing for all elements and the root */
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -22,32 +23,53 @@ html, body {
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images:IMG_0319.jpg) no-repeat center fixed;
     background-size: cover;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
+    font-family: var(--bodyFont);
+    font-size: clamp(16px, 1.1vw + 1em, 20px);
     color: var(--primaryText);
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Centers vertically */
-    align-items: center;      /* Centers horizontally */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     gap: 0.5em;
+}
+
+/* Enlarged bio section */
+.bio {
+    font-size: clamp(20px, 2vw + 1em, 24px);
+    line-height: 1.7;
+    margin-top: 1em;
+    font-family: var(--bodyFont);
+    color: var(--primaryText);
+    letter-spacing: 0.01em;
+    text-align: center;
 }
 
 /* Container for buttons and sections */
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Centers vertically inside container */
-    align-items: center;      /* Centers horizontally inside container */
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 0;
     margin: 0 auto;
 }
 
-/* Heading styling for visibility */
-h1, h2 {
-    font-size: 2em;
+h1 {
+    font-family: var(--headingFont);
+    font-size: clamp(2.2rem, 2.5vw + 1em, 2.7rem);
     margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h2,
+.article-title {
+    font-family: var(--headingFont);
+    /* Article titles decreased for less hierarchy */
+    font-size: clamp(1.1rem, 1.8vw + 1em, 1.5rem);
+    margin-bottom: 0.5em;
+    line-height: 1.3;
 }
 
 img {
@@ -78,7 +100,6 @@ img {
     white-space: nowrap;
 }
 
-/* Toggle label styling - adjust as needed */
 .toggle-label {
     font-size: clamp(18px, 2vw, 22px);
     color: var(--primaryText);
@@ -98,31 +119,22 @@ img {
     .button:hover { background-color: var(--buttonHover); }
 }
 
-/* Responsive adjustments */
 @media (min-width: 540px) {
-    .container {
-        max-width: 540px;
-    }
-    .button {
-        width: 85%;
-        font-size: 20px;
-    }
-    .toggle-label {
-        font-size: 20px;
-    }
+    .container { max-width: 540px; }
+    .button { width: 85%; font-size: 20px; }
+    .toggle-label { font-size: 20px; }
+    .bio { font-size: 22px; }
+    h1 { font-size: 2.5rem; }
+    h2, .article-title { font-size: 1.3rem; }
 }
 
 @media (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-    .button {
-        width: 40%;
-        font-size: 22px;
-    }
-    .toggle-label {
-        font-size: 22px;
-    }
+    .container { max-width: 768px; }
+    .button { width: 40%; font-size: 22px; }
+    .toggle-label { font-size: 22px; }
+    .bio { font-size: 24px; }
+    h1 { font-size: 2.7rem; }
+    h2, .article-title { font-size: 1.5rem; }
 }
 
 /* Additional utilities */
