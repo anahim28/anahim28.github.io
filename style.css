@@ -18,7 +18,7 @@ html, body {
     min-height: 100vh;
 }
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images:IMG_0319.jpg) no-repeat center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/tiger12823334174_1b3ff71a8f_b.jpg) no-repeat center fixed;
     background-size: cover;
     font-family: var(--bodyFont);
     font-size: clamp(16px, 1vw + 0.6em, 18px); /* Base size smaller than before */
