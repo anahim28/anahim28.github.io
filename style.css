@@ -45,16 +45,12 @@ body {
 }
 
 /* Enlarged but restrained bio section */
-.bio {
-    font-size: clamp(17px, 1.3vw + 0.6em, 20px);
-    line-height: 1.6;
-    margin-top: 1em;
-    font-family: var(--bodyFont);
-    color: var(--primaryText);
-    letter-spacing: 0.01em;
+.intro {
     text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
 }
-
 /* Container */
 .container {
     background: rgba(0, 0, 0, 0.55);
