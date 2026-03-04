@@ -1,9 +1,9 @@
 :root {
     --primaryText: #f5f1e8;   /* warm off-white */
-    --accent: #ff4f8b;        /* indie-political highlight */
+    --accent: #ff4f8b;        /* indie zine highlight */
     --cardBg: rgba(0, 0, 0, 0.65);
-    --bodyFont: "Merriweather", "Times New Roman", serif;
-    --headingFont: "Times New Roman", serif;
+    --bodyFont: 'Lora', serif;
+    --headingFont: 'Playfair Display', serif;
 }
 
 *,
@@ -19,13 +19,13 @@ html, body {
 }
 
 body {
-    /* full-page background */
     background-image:
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url("tiger12823334174_1b3ff71a8f_b.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
     font-family: var(--bodyFont);
     color: var(--primaryText);
     display: flex;
@@ -34,66 +34,29 @@ body {
     padding: 2rem 1rem;
 }
 
-/* Main content card */
+/* Main container - cement wall vibe */
 .container {
     background: var(--cardBg);
-    backdrop-filter: blur(8px);
-    border-radius: 18px;
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
     padding: 3rem 2rem;
     width: 100%;
     max-width: 780px;
-    text-align: center;
+    text-align: left;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+    position: relative;
 }
 
-/* Profile image */
-.image-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-.container {
-    background: 
-      rgba(0, 0, 0, 0.55) url("images/Cement-Texture-2.jpg") repeat;
-    background-size: cover;
-    backdrop-filter: blur(2px);
-    border-radius: 10px; /* slightly less rounded */
-    padding: 3rem 2rem;
-    width: 100%;
-    max-width: 780px;
-    text-align: left;  /* editorial vibe */
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.3); /* depth / roughness */
-}
-
-/* Intro text */
+/* Bio / intro */
 .intro {
-    font-size: 1.15rem;
-    line-height: 1.8;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.7;
     margin-bottom: 2rem;
-    font-style: italic; /* zine feel */
-    opacity: 0.9;
+    font-style: italic;
 }
 
-/* Headings */
-h1 {
-    font-family: var(--headingFont);
-    font-size: 2.4rem;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem;
-    text-align: left;  /* editorial vibe */
-}
-
-h2 {
-    font-family: var(--headingFont);
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    font-weight: normal;
-    line-height: 1.6;
-    text-align: left;  /* left-aligned for article look */
-}
-
-/* Buttons */
+/* Links section */
 .button {
     margin: 1rem auto;
     padding: 0.6rem 1.5rem;
@@ -113,7 +76,23 @@ h2 {
     border-color: var(--accent);
 }
 
-/* Links */
+.slidedown {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+.description {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.description h2 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
 a {
     color: var(--accent);
     text-decoration: none;
@@ -124,12 +103,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Description sections */
-.description {
-    text-align: left;
-    margin-bottom: 1rem;
-}
-
 /* Footer */
 .footer {
     margin-top: 3rem;
@@ -138,10 +111,10 @@ a:hover {
     text-align: center;
 }
 
-/* Responsive tweaks */
+/* Responsive */
 @media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.1rem; }
-    .intro { font-size: 1.05rem; }
+    .intro { font-size: 1rem; }
+    .description h2 { font-size: 1.1rem; }
+    .button { font-size: 0.95rem; }
     .container { padding: 2rem 1.5rem; }
 }
