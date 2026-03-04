@@ -154,8 +154,8 @@ img {
     padding: 0 .6em;
 }
 
-.description > p {
-    margin: .5em 0;
+    .description {
+    text-align: center;
 }
 
 .footer {
