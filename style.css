@@ -21,18 +21,18 @@ body {
 }
 
 /* CEMENT WALL PANEL */
-    .container {
+ .container {
   max-width: 900px;
   width: 100%;
   padding: 3rem 2rem;
 
-  background: burnt orange;
-  backdrop-filter: blur(10px);
+  background: rgba(204, 85, 0, 0.35); /* burnt orange + transparency */
+  border: 1px solid rgba(255,255,255,0.2);
 
-  border: 1px burnt orange;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
-  border-radius: 12px;
+  border-radius: 10px;
 }
   color: var(--textDark);
 }
