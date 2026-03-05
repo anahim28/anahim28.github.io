@@ -1,120 +1,96 @@
 :root {
-    --primaryText: #f5f1e8;   /* warm off-white */
-    --accent: #ff4f8b;        /* indie zine highlight */
-    --cardBg: rgba(0, 0, 0, 0.65);
-    --bodyFont: 'Lora', serif;
-    --headingFont: 'Playfair Display', serif;
+  --textDark: #1a1a1a;
+  --accent: #c4005c;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+* {
+  box-sizing: border-box;
 }
 
 body {
-    background-image:
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url("tiger12823334174_1b3ff71a8f_b.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  margin: 0;
+  font-family: 'Lora', serif;
+  background-image: url("tiger12823334174_1b3ff71a8f_b.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 
-    font-family: var(--bodyFont);
-    color: var(--primaryText);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
 }
 
-/* Main container - cement wall vibe */
+/* CEMENT WALL PANEL */
 .container {
-    background: var(--cardBg);
-    backdrop-filter: blur(6px);
-    border-radius: 12px;
-    padding: 3rem 2rem;
-    width: 100%;
-    max-width: 780px;
-    text-align: left;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
-    position: relative;
+  background: #d6d6d6;
+  border: 2px solid #bcbcbc;
+  padding: 3rem 2rem;
+  max-width: 750px;
+  width: 100%;
+
+  box-shadow:
+    inset 0 0 25px rgba(0,0,0,0.15),
+    0 10px 40px rgba(0,0,0,0.6);
+
+  color: var(--textDark);
 }
 
-/* Bio / intro */
+/* Intro */
 .intro {
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-    font-style: italic;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
 
-/* Links section */
+.intro p {
+  margin: 0.5rem 0;
+}
+
+/* Section Buttons */
 .button {
-    margin: 1rem auto;
-    padding: 0.6rem 1.5rem;
-    width: fit-content;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-family: var(--headingFont);
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
+  margin: 1.5rem 0 0.5rem 0;
+  padding: 0.5rem 1rem;
+  background: #bfbfbf;
+  border: 1px solid #999;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
 .button:hover {
-    background: var(--accent);
-    border-color: var(--accent);
+  background: #a8a8a8;
 }
 
-.slidedown {
-    overflow: hidden;
-    height: 0;
-    transition: height 0.3s ease;
+/* Collapsible Content */
+.content {
+  display: none;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
 }
 
-.description {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.content.active {
+  display: block;
 }
 
-.description h2 {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-bottom: 0.3rem;
+/* Articles */
+h2 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.3rem;
 }
 
 a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Footer */
 .footer {
-    margin-top: 3rem;
-    font-size: 0.85rem;
-    opacity: 0.7;
-    text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .intro { font-size: 1rem; }
-    .description h2 { font-size: 1.1rem; }
-    .button { font-size: 0.95rem; }
-    .container { padding: 2rem 1.5rem; }
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0.7;
 }
