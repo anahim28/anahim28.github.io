@@ -13,6 +13,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  
 
   display: flex;
   justify-content: center;
@@ -20,23 +21,19 @@ body {
 }
 
 /* CEMENT WALL PANEL */
-.container {
-    background: 
-      rgba(0, 0, 0, 0.55) url("images/Concrete-Texture-2.jpg") repeat;
-    background-size: cover;
-    backdrop-filter: blur(2px);
-    border-radius: 10px; /* slightly less rounded */ }
     .container {
   max-width: 900px;
   width: 100%;
   padding: 3rem 2rem;
 
-  background: rgba(255, 255, 255, 0.08);  /* very light transparent */
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
 
-  backdrop-filter: blur(2px);  /* subtle blend */
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+
+  border-radius: 12px;
 }
-
   color: var(--textDark);
 }
 
