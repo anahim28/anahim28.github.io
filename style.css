@@ -190,22 +190,21 @@ a:hover {
   margin-top: 0.3rem;
   opacity: 0.85;
 }
-h1, h2, h3 {
-  font-family: "Playfair Display", serif;
-  letter-spacing: 0.5px;
-  margin-top: 0;
-  margin-bottom: 16px;
-  color: #1f1f1f;
-}
-
 h1 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 h2 {
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1.7rem;
+  margin-top: 35px;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
 }
 .contact-link {
   position: absolute;
