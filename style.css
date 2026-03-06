@@ -100,19 +100,17 @@ h2:hover {
   font-weight: bold;
 }
 
-.button.active::after {
-  content: "–";
+.button.active + .content {
+  opacity: 1;
 }
 
 /* Collapsible Content */
 .content {
-  max-height: 0;
+  height: 0;
   overflow: hidden;
+  transition: height 0.45s ease, opacity 0.35s ease;
   opacity: 0;
-
   padding-left: 1rem;
-
-  transition: max-height 0.45s ease, opacity 0.35s ease;
 }
 .content h2 {
   border-top: 1px solid rgba(0,0,0,0.15);
