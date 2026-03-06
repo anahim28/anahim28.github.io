@@ -1,6 +1,6 @@
 :root {
-  --textDark: #1a1a1a;
-  --accent: #c4005c;
+  --textDark: #222222; /* slightly softer than black */
+  --accent: #c4005c;   /* keep accent for links and highlights */
 }
 
 * {
@@ -124,7 +124,7 @@ body {
 .content h2:first-child {
   border-top: none;
   padding-top: 0;
-}
+
 .content.active {
   max-height: 500px;
   opacity: 1;
@@ -138,11 +138,15 @@ h2 {
   line-height: 1.35;
   margin: 1.2rem 0 0.35rem;
 }
+  }
+.content h2 {
+  color: #222222;  /* same as textDark */
+}
 
 /* Links */
 .content a {
-  font-size: 0.9rem;
-  margin-left: 0.5rem;
+  color: #c4005c;  /* accent color */
+  font-weight: 500;
 }
 h2:hover {
   color: var(--accent);
