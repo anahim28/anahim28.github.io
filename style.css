@@ -122,3 +122,13 @@ a:hover {
   text-align: center;
   opacity: 0.7;
 }
+.content h2 {
+  border-top: 1px solid rgba(0,0,0,0.15);
+  padding-top: 0.9rem;
+  margin-top: 1.2rem;
+}
+
+.content h2:first-child {
+  border-top: none;
+  padding-top: 0;
+}
