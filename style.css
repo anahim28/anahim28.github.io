@@ -226,8 +226,9 @@ p {
   border-top: 1px solid rgba(0,0,0,0.08);
 }
 
-.contact-link:hover {
-  color: #000;
+#contact {
+  margin-top: 3em;
+  padding-top: 1.5em;
 }
 a {
   transition: color 0.2s ease;
