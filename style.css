@@ -20,7 +20,6 @@ body {
 
   /* Background image with subtle gradient overlay */
   background:
-    linear-gradient(to right, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.45) 40%, rgba(255,255,255,0.85) 65%),
     url("IMG_8114.jpeg");
   background-size: cover;
   background-position: center;
