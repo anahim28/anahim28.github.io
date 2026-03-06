@@ -132,12 +132,8 @@ h2:hover {
 .content h2:first-child {
   border-top: none;
   padding-top: 0;
-
-.content.active {
-  max-height: 500px;
-  opacity: 1;
-  margin-bottom: 1rem;
 }
+
 
 /* Article titles */
 h2 {
