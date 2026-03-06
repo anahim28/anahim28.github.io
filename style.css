@@ -161,14 +161,6 @@ a:hover {
   font-size: 0.8rem;
   text-align: center;
   opacity: 0.7;
-}
-
-/* Contact section spacing */
-#contact {
-  margin-top: 3em;
-  padding-top: 1.5em;
-  border-top: 1px solid rgba(0,0,0,0.08);
-}
 
 /* Mobile layout */
 @media (max-width: 768px) {
