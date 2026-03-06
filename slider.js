@@ -13,6 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         e.classList.add("highlight");
         slider.style.height = slider.scrollHeight + "px";
+        buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const content = button.nextElementSibling;
+
+    content.classList.toggle('active');
+    button.classList.toggle('active');
+  });
+});
       }
     })
   })
