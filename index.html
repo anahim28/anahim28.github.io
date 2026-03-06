@@ -52,3 +52,26 @@
 
 </body>
 </html>
+<script>
+document.querySelectorAll(".toggle").forEach(button => {
+  button.addEventListener("click", () => {
+
+    const content = button.nextElementSibling;
+
+    if (content.style.height) {
+      content.style.height = null;
+      button.classList.remove("active");
+    } else {
+
+      document.querySelectorAll(".toggle").forEach(b => {
+        b.classList.remove("active");
+        b.nextElementSibling.style.height = null;
+      });
+
+      button.classList.add("active");
+      content.style.height = content.scrollHeight + "px";
+    }
+
+  });
+});
+</script>
