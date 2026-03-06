@@ -1,27 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const a = document.querySelectorAll(".toggle");
-  a.forEach((e) => {
-    e.addEventListener("click", function () {
-      let slider = this.nextElementSibling;
-      if (slider.style.height) {
-        slider.style.height = null;
-        e.classList.remove("highlight");
-      } else {
-        document.querySelectorAll(".toggle.highlight").forEach((f) => {
-          f.classList.remove("highlight");
-          f.nextElementSibling.style.height = null;
-        });
-        e.classList.add("highlight");
-        slider.style.height = slider.scrollHeight + "px";
-        buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const content = button.nextElementSibling;
 
-    content.classList.toggle('active');
-    button.classList.toggle('active');
-  });
-});
+  const toggles = document.querySelectorAll(".toggle");
+
+  toggles.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+      const slider = this.nextElementSibling;
+
+      if (slider.style.height) {
+
+        slider.style.height = null;
+        button.classList.remove("active");
+
+      } else {
+
+        document.querySelectorAll(".toggle.active").forEach(openBtn => {
+          openBtn.classList.remove("active");
+          openBtn.nextElementSibling.style.height = null;
+        });
+
+        button.classList.add("active");
+        slider.style.height = slider.scrollHeight + "px";
+
       }
-    })
-  })
-})
+
+    });
+
+  });
+
+});
