@@ -90,7 +90,10 @@ body {
 .button:hover {
   background: #a8a8a8;
 }
-
+h2:hover {
+  color: var(--accent);
+  cursor: pointer;
+}
 /* plus/minus indicator */
 .button::after {
   content: "+";
