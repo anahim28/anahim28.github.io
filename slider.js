@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         slider.style.height = null;
         button.classList.remove("active");
       } else {
-        // Close other open sections
         toggles.forEach(otherBtn => {
           if (otherBtn !== button) {
             otherBtn.classList.remove("active");
