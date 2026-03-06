@@ -1,6 +1,6 @@
 :root {
-  --textDark: #222222; /* slightly softer than black */
-  --accent: #c4005c;   /* keep accent for links and highlights */
+  --textDark: #222222; 
+  --accent: #c4005c;   
 }
 
 * {
@@ -141,7 +141,7 @@ h2 {
 }
   }
 .content h2 {
-  color: #222222;  /* same as textDark */
+  color: #222222;  
 }
 
 /* Links */
