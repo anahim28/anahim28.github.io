@@ -207,3 +207,17 @@ h2 {
   font-size: 1.6rem;
   font-weight: 500;
 }
+.contact-link {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4d3f35;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #000;
+}
