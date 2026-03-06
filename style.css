@@ -233,3 +233,6 @@ p {
 .contact-link:hover {
   color: #000;
 }
+a {
+  transition: color 0.2s ease;
+}
