@@ -137,17 +137,14 @@ h2:hover {
 }
 
 /* Links */
-.content a {
-  color: var(--accent);
-  font-weight: 600;
+a {
+  color: #5a4a3f;
   text-decoration: none;
-  margin-top: 0.2rem;
-  display: inline-block;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-.content a:hover {
-  text-decoration: underline;
-  transform: translateX(2px);
+a:hover {
+  color: #000;
 }
 
 /* Footer */
