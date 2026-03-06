@@ -104,9 +104,10 @@ body {
 
 /* Article titles */
 h2 {
-  font-size: 1.05rem;
-  margin: 1rem 0 0.3rem;
+  font-size: 1.15rem;
   font-weight: 700;
+  line-height: 1.35;
+  margin: 1.2rem 0 0.35rem;
 }
 
 /* Links */
