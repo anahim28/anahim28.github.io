@@ -208,15 +208,10 @@ p {
   font-size: 1.05rem;
   margin-bottom: 18px;
 }
-.contact-link {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #4d3f35;
-  text-decoration: none;
+#contact {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
 
 .contact-link:hover {
