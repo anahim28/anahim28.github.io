@@ -66,13 +66,19 @@ body {
 
 /* Collapsible Content */
 .content {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
   padding-left: 1rem;
-  margin-bottom: 1rem;
+
+  transition: max-height 0.45s ease, opacity 0.35s ease;
 }
 
 .content.active {
-  display: block;
+  max-height: 500px;
+  opacity: 1;
+  margin-bottom: 1rem;
 }
 
 /* Articles */
