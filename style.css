@@ -145,3 +145,14 @@ a:hover {
   text-align: center;
   opacity: 0.7;
 }
+.content h2 {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-top: 1.4rem;
+}
+
+.content a {
+  display: inline-block;
+  margin-top: 0.15rem;
+  font-size: 0.95rem;
+}
