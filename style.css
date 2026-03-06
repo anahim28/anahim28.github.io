@@ -189,3 +189,20 @@ a:hover {
   margin-top: 0.3rem;
   opacity: 0.85;
 }
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #1f1f1f;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
