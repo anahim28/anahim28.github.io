@@ -99,7 +99,14 @@ h2:hover {
   content: "+";
   font-weight: bold;
 }
+.button::after {
+  content: "+";
+  float: right;
+}
 
+.button.active::after {
+  content: "–";
+}
 .button.active + .content {
   opacity: 1;
 }
