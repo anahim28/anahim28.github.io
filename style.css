@@ -218,6 +218,7 @@ h2 {
 }
 
 p {
+  max-width: 60ch;
   margin-bottom: 1.4em;
 }
 #contact {
