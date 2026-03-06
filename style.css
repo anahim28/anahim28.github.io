@@ -14,27 +14,27 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  
 
   display: flex;
   justify-content: center;
   padding: 3rem 1rem;
 }
 
-/* CEMENT WALL PANEL */
- .container {
+/* Panel */
+.container {
   max-width: 900px;
   width: 100%;
   padding: 3rem 2rem;
 
-  background: rgba(204, 85, 0, 0.35); /* burnt orange + transparency */
+  background: rgba(204, 85, 0, 0.35);
   border: 1px solid rgba(255,255,255,0.2);
 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
   border-radius: 10px;
-box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+
   color: var(--textDark);
 }
 
@@ -49,28 +49,35 @@ box-shadow: 0 10px 35px rgba(0,0,0,0.25);
   margin: 0.5rem 0;
 }
 
-/* Section Buttons */
+/* Buttons */
 .button {
   margin: 1.5rem 0 0.5rem 0;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   background: #bfbfbf;
   border: 1px solid #999;
   cursor: pointer;
   font-weight: bold;
-  transition: 0.3s ease;
-   font-family: 'Lora', serif;
+  font-family: 'Lora', serif;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: background 0.25s ease;
 }
 
 .button:hover {
   background: #a8a8a8;
-  .button::after {
+}
+
+/* plus/minus indicator */
+.button::after {
   content: "+";
-  float: right;
+  font-weight: bold;
 }
 
 .button.active::after {
   content: "–";
-}
 }
 
 /* Collapsible Content */
@@ -90,12 +97,14 @@ box-shadow: 0 10px 35px rgba(0,0,0,0.25);
   margin-bottom: 1rem;
 }
 
-/* Articles */
+/* Article titles */
 h2 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin: 1rem 0 0.3rem;
+  font-weight: 700;
 }
 
+/* Links */
 a {
   color: var(--accent);
   text-decoration: none;
@@ -106,6 +115,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Footer */
 .footer {
   margin-top: 3rem;
   font-size: 0.8rem;
