@@ -57,7 +57,10 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.15);
 }
-
+p {
+  margin-bottom: 20px;
+  max-width: 65ch;
+}
 /* Intro */
 .intro {
   text-align: left;
