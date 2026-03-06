@@ -19,6 +19,22 @@ body {
   justify-content: center;
   padding: 3rem 1rem;
 }
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background-image: linear-gradient(
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.35)
+  ), url("tiger12823334174_1b3ff71a8f_b.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
 
 /* Panel */
 .container {
@@ -95,7 +111,20 @@ body {
 
   transition: max-height 0.45s ease, opacity 0.35s ease;
 }
+.content h2 {
+  border-top: 1px solid rgba(0,0,0,0.15);
+  padding-top: 0.9rem;
+  margin-top: 1.2rem;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content h2:first-child {
+  border-top: none;
+  padding-top: 0;
+}
 .content.active {
   max-height: 500px;
   opacity: 1;
@@ -111,10 +140,9 @@ h2 {
 }
 
 /* Links */
-a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
+.content a {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
 }
 h2:hover {
   color: var(--accent);
