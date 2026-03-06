@@ -12,7 +12,7 @@ body {
   margin: 0;
   font-family: 'Lora', serif;
 
-  background-image: linear-gradient(
+ background-image: url("IMG_8114.jpeg"); 
     rgba(0,0,0,0.35),
     rgba(0,0,0,0.35)
   ), url("-9.jpg");
