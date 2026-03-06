@@ -208,22 +208,17 @@ a:hover {
 .site-header p {
   margin-top: 0.3rem;
   opacity: 0.85;
-}
 h1 {
-  font-size: 2.6rem;
-  font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 0.6em;
 }
 
 h2 {
-  font-size: 1.7rem;
-  margin-top: 35px;
-  margin-bottom: 12px;
+  margin-top: 2.2em;
+  margin-bottom: 0.6em;
 }
 
 p {
-  font-size: 1.05rem;
-  margin-bottom: 18px;
+  margin-bottom: 1.4em;
 }
 #contact {
   margin-top: 40px;
