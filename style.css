@@ -14,12 +14,17 @@ body {
 
 body {
   margin: 0;
+  padding: 0;
   min-height: 100vh;
+
   background-image: url("IMG_8114.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+
+  font-family: "Playfair Display", Georgia, serif;
+  color: #2c2c2c;
+  line-height: 1.7;
 }
 
 {
