@@ -67,12 +67,13 @@ h2 {
 }
 
 /* Buttons */
-.button, .content {
-  max-width: 600px;
-  margin: 1.5rem auto;
-  padding: 0.6rem 1rem;
-  background: rgba(255,255,255,0.05);  /* subtle background for readability */
-  border-radius: 6px;
+.button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
+}
+.content {
+  margin-bottom: 1.5rem;
 }
 .button:hover {
   background: #a8a8a8;
