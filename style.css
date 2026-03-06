@@ -34,7 +34,7 @@ body {
   -webkit-backdrop-filter: blur(8px);
 
   border-radius: 10px;
-}
+
   color: var(--textDark);
 }
 
