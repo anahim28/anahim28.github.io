@@ -11,6 +11,40 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".button.toggle");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+
+        // Close if already open
+        if (this.classList.contains("active")) {
+          this.classList.remove("active");
+          content.style.height = content.scrollHeight + "px"; // set current height
+          requestAnimationFrame(() => {
+            content.style.height = "0px";
+          });
+        } else {
+          // Open this one
+          this.classList.add("active");
+          content.style.height = content.scrollHeight + "px";
+        }
+
+        // When transition ends and it’s open, reset height to auto
+        content.addEventListener("transitionend", function (e) {
+          if (e.propertyName === "height") {
+            if (button.classList.contains("active")) {
+              content.style.height = "auto";
+            }
+          }
+        });
+      });
+    });
+  });
+</script>
+
 <body>
 
   <!-- Sidebar Intro -->
