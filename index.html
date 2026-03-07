@@ -11,40 +11,6 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".button.toggle");
-
-    buttons.forEach(button => {
-      button.addEventListener("click", function () {
-        const content = this.nextElementSibling;
-
-        // Close if already open
-        if (this.classList.contains("active")) {
-          this.classList.remove("active");
-          content.style.height = content.scrollHeight + "px"; // set current height
-          requestAnimationFrame(() => {
-            content.style.height = "0px";
-          });
-        } else {
-          // Open this one
-          this.classList.add("active");
-          content.style.height = content.scrollHeight + "px";
-        }
-
-        // When transition ends and it’s open, reset height to auto
-        content.addEventListener("transitionend", function (e) {
-          if (e.propertyName === "height") {
-            if (button.classList.contains("active")) {
-              content.style.height = "auto";
-            }
-          }
-        });
-      });
-    });
-  });
-</script>
-
 <body>
 
   <!-- Sidebar Intro -->
@@ -60,7 +26,6 @@
     <blockquote>
       <p>“Let this radicalize you rather than lead you to despair.” – Mariame Kaba</p>
     </blockquote>
-
 
     <!-- Political Commentary -->
     <div class="button toggle">Political Commentary</div>
@@ -94,3 +59,41 @@
     </footer>
 
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".button.toggle");
+
+      buttons.forEach(button => {
+        const content = button.nextElementSibling;
+
+        // Start closed
+        content.style.height = "0px";
+
+        button.addEventListener("click", function () {
+          if (button.classList.contains("active")) {
+            // Close
+            button.classList.remove("active");
+            content.style.height = content.scrollHeight + "px";
+            requestAnimationFrame(() => {
+              content.style.height = "0px";
+              content.style.opacity = "0";
+            });
+          } else {
+            // Open
+            button.classList.add("active");
+            content.style.height = content.scrollHeight + "px";
+            content.style.opacity = "1";
+          }
+        });
+
+        content.addEventListener("transitionend", function (e) {
+          if (e.propertyName === "height" && button.classList.contains("active")) {
+            content.style.height = "auto";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
