@@ -22,7 +22,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr); /* Sidebar + main content */
   gap: 2.5rem;
@@ -42,8 +41,7 @@ body {
   width: 100%;
   padding: 1.8rem 2rem;
  margin: 3rem auto;
-background: rgba(255,255,255,0.15);
-backdrop-filter: blur(8px);
+border: 1px solid rgba(255,255,255,0.25);
 
   border-radius: 14px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.15);
