@@ -29,15 +29,7 @@ body {
   padding: 3rem;
 }
 
-/* Sidebar / Intro */
-.intro {
-  grid-column: 1;
-  max-width: 220px;
-  text-align: left;
-  margin-bottom: 2.5rem;
-  line-height: 1.7;
-  padding-right: 1rem;
-}
+
 
 .intro p,
 .content p {
