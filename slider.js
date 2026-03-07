@@ -3,14 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggles.forEach(button => {
     button.addEventListener("click", () => {
-      const content = button.nextElementSibling;
+      const slider = button.nextElementSibling;
 
-      if (content.style.height) {
-        // Collapse this section
-        content.style.height = null;
+      if (slider.style.height) {
+        slider.style.height = null;
         button.classList.remove("active");
       } else {
-        // Collapse all other sections
         toggles.forEach(otherBtn => {
           if (otherBtn !== button) {
             otherBtn.classList.remove("active");
@@ -18,9 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        // Expand clicked section
         button.classList.add("active");
-        content.style.height = content.scrollHeight + "px";
+        slider.style.height = slider.scrollHeight + "px";
       }
     });
   });
