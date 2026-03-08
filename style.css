@@ -37,14 +37,16 @@ body {
 
 /* Main content wrapper with glass effect */
 .main-content {
-   max-width: 600px;   /* was too wide */
-  width: 100%;
-  padding: 1.8rem 2rem;
- margin: 3rem auto;
-border: 3px solid rgba(255,255,255,0.25);
+  max-width: 560px;   /* controls the width */
+  width: 90%;         /* keeps it responsive */
+  margin: 2rem auto;  /* centers it */
 
-  border-radius: 14px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  padding: 1.8rem 2rem; /* slightly smaller padding */
+
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(7px);
+
+  border-radius: 12px;
 }
 
 /* Buttons */
