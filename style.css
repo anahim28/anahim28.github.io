@@ -37,18 +37,17 @@ body {
 
 /* Main content wrapper with glass effect */
 .main-content {
-  max-width: 520px;   /* controls the width */
-  width: 90%;         /* keeps it responsive */
-  margin: 2rem auto;  /* centers it */
+  max-width: 720px;  
+  width: 90%;
+  margin: 3rem auto;
 
-  padding: 1.8rem 2rem; /* slightly smaller padding */
+  padding: 2.5rem 3rem;  
 
   background: rgba(255,255,255,0.15);
   backdrop-filter: blur(7px);
 
   border-radius: 12px;
 }
-
 /* Buttons */
 .button {
   max-width: 600px;
