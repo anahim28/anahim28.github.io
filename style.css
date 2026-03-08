@@ -37,7 +37,7 @@ body {
 
 /* Main content wrapper with glass effect */
 .main-content {
-  max-width: 560px;   /* controls the width */
+  max-width: 520px;   /* controls the width */
   width: 90%;         /* keeps it responsive */
   margin: 2rem auto;  /* centers it */
 
