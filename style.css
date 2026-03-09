@@ -125,7 +125,13 @@ h2:hover {
   border-top: none;
   padding-top: 0;
 }
-
+.content, 
+.content h2, 
+.content p, 
+.content li, 
+.content span {
+  font-family: 'Source Sans 3', sans-serif;
+}
 /* Links */
 a {
   color: var(--accent);
