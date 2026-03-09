@@ -11,32 +11,23 @@
 body {
   margin: 0;
   min-height: 100vh;
-  color: var(--textDark);
-  line-height: 1.8;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.75;
   letter-spacing: 0.2px;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 16px; 
-  color: #1a1a1a; 
-  line-height: 1.75;
-}
 
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-  background: url("IMG_8114.jpeg");
+  /* Background image */
+  background: url("IMG_8114.jpeg") no-repeat center center;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
+  /* Layout */
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr); /* Sidebar + main content */
+  grid-template-columns: 280px minmax(0, 1fr);
   gap: 2.5rem;
   padding: 3rem;
 }
-
 
 
 .intro p,
