@@ -19,7 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
 
   /* Background image */
-  background: url("IMG_8114.jpeg") no-repeat center center;
+  background: url("images/IMG_8114.jpeg") no-repeat center center;
   background-size: cover;
 
   /* Layout */
@@ -37,8 +37,9 @@ body {
 
 /* Main content wrapper with glass effect */
 .main-content {
-  background: rgba(255,255,255,0.2); /* slightly more opaque */
-  backdrop-filter: blur(10px); /* stronger blur */
+  .main-content {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   padding: 3rem 3.5rem;
