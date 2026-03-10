@@ -3,7 +3,9 @@
   --accent: #c4005c;   
 }
 
-
+* {
+  box-sizing: border-box;
+}
 
 /* Background & Body */
 body {
@@ -18,7 +20,7 @@ body {
 
   /* Background image */
   background: url("images/IMG_8114.jpeg") no-repeat center center;
-  background-size: cover;
+background-size: cover;
   position: relative;
 
   /* Layout */
@@ -26,7 +28,8 @@ body {
   grid-template-columns: 280px minmax(0, 1fr);
   gap: 2.5rem;
   padding: 3rem;
-}
+
+
 
 .intro p,
 .content p {
@@ -34,6 +37,7 @@ body {
 }
 
 /* Main content wrapper with glass effect */
+.main-content {
   .main-content {
   background: rgba(255,255,255,0.2);
   backdrop-filter: blur(10px);
