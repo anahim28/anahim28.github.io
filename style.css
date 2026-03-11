@@ -7,15 +7,13 @@
   box-sizing: border-box;
 }
 
-/* Background & Body */
-body {
-  html, body {
+html, body {
   height: 100%;
   margin: 0;
 }
 
+/* Background & Body */
 body {
-  margin: 0;
   min-height: 100vh;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 16px;
@@ -23,18 +21,28 @@ body {
   line-height: 1.75;
   letter-spacing: 0.2px;
   -webkit-font-smoothing: antialiased;
-  background-image: url("images/IMG_7187.jpeg");no-repeat center center;
+
+  /* Background image */
+  background: url("images/IMG_7187.jpeg") no-repeat center center;
   background-size: cover;
-  position: relative;
 
   /* Layout */
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
   gap: 2.5rem;
   padding: 3rem;
+}
 
+/* Background overlay (Design tweak #1) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: -1;
+}
 
-
+/* Intro + content text spacing */
 .intro p,
 .content p {
   line-height: 1.7;
@@ -42,13 +50,27 @@ body {
 
 /* Main content wrapper with glass effect */
 .main-content {
-  .main-content {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.2);
   padding: 3rem 3.5rem;
 }
+
+/* Page title */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Subtitle */
+blockquote p {
+  margin: 0.25rem 0;
+}
+
 /* Buttons */
 .button {
   max-width: 600px;
@@ -57,30 +79,32 @@ body {
   font-weight: bold;
   font-family: 'Source Sans 3', sans-serif;
   cursor: pointer;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  border: 1px solid rgba(0,0,0,0.15);
-  transition: background 0.2s, transform 0.15s;
-   background: rgba(255,255,255,0.1);
+
+  background: rgba(255,255,255,0.15);
   border: 1px solid rgba(0,0,0,0.15);
   border-radius: 8px;
+
   padding: 0.9rem 1.5rem;
-  transition: all 0.3s ease;
+
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  transition: all 0.25s ease;
 }
 
 .button:hover {
- background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.35);
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
-/* Collapse + indicator */
+/* Collapse indicator */
 .button::after {
   content: "+";
   font-weight: bold;
 }
+
 .button.active::after {
   content: "–";
 }
@@ -90,9 +114,11 @@ body {
   max-width: 600px;
   margin: 0.5rem auto 1.5rem;
   padding-left: 1rem;
+
   height: 0;
   overflow: hidden;
   opacity: 0;
+
   transition: height 0.45s ease, opacity 0.35s ease;
 }
 
@@ -106,29 +132,27 @@ h2 {
   font-weight: 700;
   line-height: 1.4;
   margin: 1.4rem 0 0.35rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
+  transition: color 0.2s ease, transform 0.15s ease;
 }
+
+/* Design tweak #2 — nicer hover */
 h2:hover {
   color: var(--accent);
+  transform: translateX(3px);
   cursor: pointer;
 }
+
 .content h2 {
-  border-top: 1px solid rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  padding: 0.5rem 0;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  padding: 0.6rem 0;
   margin: 0.6rem 0;
 }
+
 .content h2:first-child {
   border-top: none;
-  padding-top: 0;
 }
-.content, 
-.content h2, 
-.content p, 
-.content li, 
-.content span {
-  font-family: 'Source Sans 3', sans-serif;
-}
+
 /* Links */
 a {
   color: var(--accent);
@@ -136,6 +160,8 @@ a {
   font-weight: 500;
   transition: color 0.2s, transform 0.15s;
 }
+
+/* Design tweak #3 — subtle link motion */
 a:hover {
   color: darkred;
   transform: translateX(2px);
