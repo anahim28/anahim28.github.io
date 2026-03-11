@@ -23,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
 
   /* Background image */
-  background: url("images/IMG_7187.jpeg") no-repeat center center;
+ background-image: url("images/IMG_7187.jpeg");
   background-size: cover;
 
   /* Layout */
