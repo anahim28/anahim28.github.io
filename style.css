@@ -22,9 +22,10 @@ body {
   letter-spacing: 0.2px;
   -webkit-font-smoothing: antialiased;
 
-  /* Background image */
- background-image: url("images/IMG_7187.jpeg");
+  background-image: url("/IMG_7187.jpeg");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   /* Layout */
   display: grid;
