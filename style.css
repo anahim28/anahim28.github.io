@@ -1,6 +1,6 @@
 :root {
-  --textDark: #222222; 
-  --accent: #c4005c;   
+  --textDark: #222222;
+  --accent: #c4005c;
 }
 
 * {
@@ -12,9 +12,7 @@ html, body {
   margin: 0;
 }
 
-/* Background & Body */
-body {
-  min-height: 100vh;
+/* ===== Background layer ===== */
 
 .background {
   position: fixed;
@@ -22,50 +20,42 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-
   background-image: url("/IMG_8114.jpeg");
   background-size: cover;
   background-position: center 5%;
   background-repeat: no-repeat;
+  z-index: -2;
+}
 
-  z-index: -1;
+/* Dark overlay for readability */
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
 
+/* ===== Page layout ===== */
+
+body {
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 260px 1fr;
   gap: 3rem;
-
   padding: 3rem;
 
- 
   font-family: 'Source Sans 3', sans-serif;
   font-size: 16px;
   color: #1a1a1a;
   line-height: 1.75;
   letter-spacing: 0.2px;
   -webkit-font-smoothing: antialiased;
-  background-position: center;
-  background-repeat: no-repeat;
-
 }
 
-/* Background overlay */
-body::before {
-  content: "";
+/* ===== Main content panel ===== */
 
-  inset: 0;
-  background: rgba(0,0,0,0.25);
-
-}
-
-/* Intro + content text spacing */
-.intro p,
-.content p {
-  line-height: 1.7;
-}
-
-/* Main content wrapper with glass effect */
 .main-content {
-  max-width: 720px;
+  max-width: 900px;
   margin: 0 auto;
   background: rgba(255,255,255,0.18);
   backdrop-filter: blur(12px);
@@ -74,25 +64,34 @@ body::before {
   padding: 3rem 3.5rem;
 }
 
-/* Page title */
+/* ===== Typography ===== */
+
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.3rem;
+  font-size: 2.8rem;
   margin-bottom: 0.4rem;
 }
 
-/* Subtitle */
 blockquote p {
   margin: 0.25rem 0;
+  opacity: 0.9;
 }
 
-/* Buttons */
+.intro p,
+.content p {
+  line-height: 1.7;
+}
+
+/* ===== Buttons ===== */
+
 .button {
-  max-width: 600px;
-  margin: 2rem auto 0;
+  width: 100%;
+  margin-top: 2rem;
+
   font-size: 1.1rem;
   font-weight: bold;
   font-family: 'Source Sans 3', sans-serif;
+
   cursor: pointer;
 
   display: flex;
@@ -114,7 +113,8 @@ blockquote p {
   transform: translateY(-3px);
 }
 
-/* Collapse indicator */
+/* collapse indicator */
+
 .button::after {
   content: "+";
   font-weight: bold;
@@ -124,10 +124,9 @@ blockquote p {
   content: "–";
 }
 
-/* Collapsible Content */
-.content {
-  grid-column: 2;
+/* ===== Collapsible content ===== */
 
+.content {
   max-width: 700px;
   margin-top: 1rem;
 
@@ -135,14 +134,16 @@ blockquote p {
   overflow: hidden;
   opacity: 0;
 
-  transition: opacity 0.3s ease;
+  transition: opacity 0.35s ease;
 }
 
 .button.active + .content {
   height: auto;
   opacity: 1;
 }
-/* Article titles */
+
+/* ===== Article titles ===== */
+
 h2 {
   font-size: 1.3rem;
   font-weight: 700;
@@ -152,7 +153,6 @@ h2 {
   transition: color 0.2s ease, transform 0.15s ease;
 }
 
-/* Design tweak #2 — nicer hover */
 h2:hover {
   color: var(--accent);
   transform: translateX(3px);
@@ -169,7 +169,8 @@ h2:hover {
   border-top: none;
 }
 
-/* Links */
+/* ===== Links ===== */
+
 a {
   color: var(--accent);
   text-decoration: none;
@@ -177,13 +178,13 @@ a {
   transition: color 0.2s, transform 0.15s;
 }
 
-/* Design tweak #3 — subtle link motion */
 a:hover {
   color: darkred;
   transform: translateX(2px);
 }
 
-/* Footer */
+/* ===== Footer ===== */
+
 .footer {
   grid-column: 1 / -1;
   margin-top: 3rem;
@@ -192,21 +193,22 @@ a:hover {
   opacity: 0.7;
 }
 
-/* Mobile layout */
+/* ===== Mobile ===== */
+
 @media (max-width: 768px) {
+
   body {
     display: block;
     padding: 2rem 1rem;
-  }
-
-  .intro {
-    max-width: none;
-    margin-bottom: 1.5rem;
-    padding-right: 0;
   }
 
   .main-content {
     max-width: 100%;
     margin: 0 auto;
   }
+
+  .button {
+    width: 100%;
+  }
+
 }
