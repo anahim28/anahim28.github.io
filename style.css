@@ -184,7 +184,23 @@ a:hover {
   text-align: center;
   opacity: 0.7;
 }
+.section {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
 
+.content {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: width 0.4s ease, opacity 0.3s ease;
+}
+
+.button.active + .content {
+  width: 600px;
+  opacity: 1;
+}
 /* Mobile layout */
 @media (max-width: 768px) {
   body {
