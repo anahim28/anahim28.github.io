@@ -16,7 +16,7 @@ html, body {
 body {
   min-height: 100vh;
 
-  background: url("/IMG_8114.jpeg") no-repeat center center;
+  background: url("IMG_7187.jpeg") background-position: top center;
   background-size: cover;
 
   display: grid;
