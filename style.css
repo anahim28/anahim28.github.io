@@ -15,26 +15,29 @@ html, body {
 /* Background & Body */
 body {
   min-height: 100vh;
+
+  background: url("/IMG_7187.jpeg") no-repeat center center;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+
+  padding: 3rem;
+
+ 
   font-family: 'Source Sans 3', sans-serif;
   font-size: 16px;
   color: #1a1a1a;
   line-height: 1.75;
   letter-spacing: 0.2px;
   -webkit-font-smoothing: antialiased;
-
-  background-image: url("/IMG_8114.jpeg");
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  /* Layout */
-  display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
-  gap: 2.5rem;
-  padding: 3rem;
 }
 
-/* Background overlay (Design tweak #1) */
+/* Background overlay */
 body::before {
   content: "";
   position: fixed;
